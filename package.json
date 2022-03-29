@@ -1,0 +1,30 @@
+{
+    "name": "refetch-interval",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT",
+    "scripts": {
+      "start": "yarn test && yarn test:dd",
+      "test": "jest",
+      "test:dd": "DD_ENV=ci jest"
+    },
+    "jest": {
+      "testEnvironment": "./environment.js",
+      "transform": {
+        "^.+\\.js$": "babel-jest"
+      },
+      "setupFiles": ["./explodeOnError.js"]
+    },
+    "dependencies": {
+      "@babel/preset-env": "7.16.11",
+      "@babel/preset-react": "7.16.7",
+      "@testing-library/react": "12.1.4",
+      "babel-jest": "27.5.1",
+      "dd-trace": "2.4.0",
+      "jest": "27.5.1",
+      "jest-react": "0.12.0",
+      "react": "17.0.2",
+      "react-dom": "17.0.2"
+    }
+  }
+  
